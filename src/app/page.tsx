@@ -1,4 +1,5 @@
 import StatCard from "@/components/StatCard";
+import ThreatChart from "@/components/ThreatChart";
 import Link from "next/link";
 
 export default function Home() {
@@ -28,6 +29,10 @@ export default function Home() {
       <p>A-102 | High</p>
       <p>A-103 | Medium</p>
     </div>
+  </div>
+
+  <div className="mt-8">
+      <ThreatChart />
   </div>
 
   <div className="bg-slate-800 rounded-xl p-6">
