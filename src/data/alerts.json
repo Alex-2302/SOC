@@ -1,0 +1,18 @@
+[
+  {
+    "source": "suricata",
+    "source_ip": "192.168.1.105",
+    "dest_ip": "10.0.0.1",
+    "rule_name": "ET SCAN Nmap",
+    "severity": "medium",
+    "timestamp": "2026-06-07T08:30:00Z"
+  },
+  {
+    "source": "zeek",
+    "source_ip": "192.168.1.110",
+    "dest_ip": "10.0.0.5",
+    "rule_name": "Suspicious DNS Activity",
+    "severity": "critical",
+    "timestamp": "2026-06-07T08:35:00Z"
+  }
+]

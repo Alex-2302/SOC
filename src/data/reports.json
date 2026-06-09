@@ -1,0 +1,22 @@
+[
+  {
+    "id": "REP-001",
+    "title": "Weekly Threat Summary",
+    "description": "Summary of threats detected this week."
+  },
+  {
+    "id": "REP-002",
+    "title": "Incident Analysis Report",
+    "description": "Detailed incident investigation report."
+  },
+  {
+    "id": "REP-003",
+    "title": "Compliance Report",
+    "description": "Compliance status and audit findings."
+  },
+  {
+    "id": "REP-004",
+    "title": "Executive Security Report",
+    "description": "High-level security metrics for management."
+  }
+]

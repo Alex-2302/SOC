@@ -1,0 +1,22 @@
+[
+  {
+    "id": "PB-001",
+    "title": "Malware Response",
+    "description": "Procedure for handling malware infections."
+  },
+  {
+    "id": "PB-002",
+    "title": "Phishing Investigation",
+    "description": "Steps to investigate phishing incidents."
+  },
+  {
+    "id": "PB-003",
+    "title": "Ransomware Containment",
+    "description": "Containment and recovery workflow."
+  },
+  {
+    "id": "PB-004",
+    "title": "Data Exfiltration Response",
+    "description": "Investigation process for data theft."
+  }
+]

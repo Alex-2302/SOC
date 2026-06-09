@@ -15,13 +15,17 @@ export default function PlaybookCard({
       </div>
 
       <div className="flex gap-3">
-        <button className="bg-slate-700 px-4 py-2 rounded">
+        <button className="bg-slate-700 px-4 py-2 rounded"
+        onClick={() => alert(description)}>
           View
         </button>
-
-        <button className="bg-blue-600 px-4 py-2 rounded">
+        
+        <button className="bg-blue-600 px-4 py-2 rounded"
+        onClick={() => alert(`Executing ${title}`)}>
           Run
+          
         </button>
+        
       </div>
     </div>
   );

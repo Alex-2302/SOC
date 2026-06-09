@@ -1,25 +1,16 @@
-export default function AlertTable() {
-  const alerts = [
-    {
-      id: "A-101",
-      severity: "Critical",
-      source: "Windows Server",
-      status: "Open",
-    },
-    {
-      id: "A-102",
-      severity: "High",
-      source: "Firewall",
-      status: "Investigating",
-    },
-    {
-      id: "A-103",
-      severity: "Medium",
-      source: "Wazuh Agent",
-      status: "Closed",
-    },
-  ];
+"use client";
 
+import { useState } from "react";
+import alerts from "@/data/alerts.json";
+
+export default function AlertTable() {
+
+  const [search, setSearch] = useState("");
+
+  const filteredAlerts = alerts.filter((alert) =>
+  alert.rule_name.toLowerCase().includes(search.toLowerCase())
+);
+  
   return (
 
     <div className="bg-slate-800 rounded-xl p-6">
@@ -27,55 +18,58 @@ export default function AlertTable() {
          <input
               type="text"
               placeholder="Search alerts..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               className="w-full bg-slate-700 border border-slate-600 rounded-lg p-3 text-white"
            />
         </div>
       <table className="w-full">
         <thead>
-          <tr className="border-b border-slate-700">
-            <th className="text-left py-3">Alert ID</th>
-            <th className="text-left py-3">Severity</th>
-            <th className="text-left py-3">Source</th>
-            <th className="text-left py-3">Status</th>
+          <tr className="border-b border-slate-700 h-15">
+            <th>Source</th>
+
+            <th>Source IP</th>
+
+            <th>Destination IP</th>
+
+            <th>Rule Name</th>
+
+            <th>Severity</th>
+
+            <th>Timestamp</th>
+
           </tr>
         </thead>
 
         <tbody>
-          {alerts.map((alert) => (
-            <tr
-              key={alert.id}
-              className="border-b border-slate-700"
-            >
-              <td className="py-3">{alert.id}</td>
-              <td>
-                  <span
-                      className={
-                      alert.severity === "Critical"
-                      ? "bg-red-600 px-3 py-1 rounded-md text-sm font-medium"
-                      : alert.severity === "High"
-                      ? "bg-orange-500 px-3 py-1 rounded-md text-sm font-medium"
-                      : "bg-yellow-500 text-black px-3 py-1 rounded-md text-sm font-medium"
-                    }
+          {filteredAlerts.map((alert) => (
+            <tr key={alert.rule_name}>
+              <td className="px-4 py-3">{alert.source}</td>
+
+              <td className="px-4 py-3 font-mono">{alert.source_ip}</td>
+
+              <td className="px-4 py-3 font-mono">{alert.dest_ip}</td>
+
+              <td className="px-4 py-3">{alert.rule_name}</td>
+
+              <td className="px-4 py-3">
+                <span
+                  className={
+                    alert.severity === "critical"
+                      ? "bg-red-600 px-2 py-1 rounded"
+                      : alert.severity === "high"
+                      ? "bg-orange-500 px-2 py-1 rounded"
+                      : "bg-yellow-500 text-black px-2 py-1 rounded"
+                  }
                 >
-                      {alert.severity}
-                  </span>
+                  {alert.severity}
+                </span>
               </td>
-              <td>{alert.source}</td>
-              <td>
-                  <span
-                      className={
-                      alert.status === "Open"
-                      ? "bg-red-700 px-3 py-1 rounded-md text-sm"
-                      : alert.status === "Investigating"
-                      ? "bg-blue-600 px-3 py-1 rounded-md text-sm"
-                      : "bg-green-600 px-3 py-1 rounded-md text-sm"
-                    }
-                >
-                      {alert.status}
-                  </span>
-              </td>
+
+              <td className="px-4 py-3">{alert.timestamp}</td>
             </tr>
           ))}
+          
         </tbody>
       </table>
     </div>

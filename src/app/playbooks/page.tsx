@@ -1,4 +1,4 @@
-import PlaybookCard from "../../components/PlaybookCard";
+import PlaybookList from "../../components/PlaybookList";
 
 export default function PlaybooksPage() {
   return (
@@ -7,35 +7,7 @@ export default function PlaybooksPage() {
         Security Playbooks
       </h1>
 
-      <div className="mb-6">
-          <input
-              type="text"
-              placeholder="Search playbooks..."
-              className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2"
-          />
-      </div>
-
-      <div className="space-y-4">
-        <PlaybookCard
-          title="Malware Response"
-          description="Procedure for handling malware infections."
-        />
-
-        <PlaybookCard
-          title="Phishing Investigation"
-          description="Steps to investigate phishing incidents."
-        />
-
-        <PlaybookCard
-          title="Ransomware Containment"
-          description="Containment and recovery workflow."
-        />
-
-        <PlaybookCard
-          title="Data Exfiltration Response"
-          description="Investigation process for data theft."
-        />
-      </div>
+      <PlaybookList />
     </main>
   );
 }
