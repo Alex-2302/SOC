@@ -7,10 +7,38 @@
     "status": "open"
   },
   {
+    "incident_id": "INC-2026-908BB43",
+    "title": "Brute Force Detected",
+    "type": "brute_force",
+    "severity": "high",
+    "status": "open"
+  },
+  {
     "incident_id": "INC-2026-A12CD4",
     "title": "Malware Infection",
     "type": "malware",
     "severity": "critical",
+    "status": "in_progress"
+  },
+  {
+    "incident_id": "INC-2026-A12CD24",
+    "title": "Malware Infection",
+    "type": "malware",
+    "severity": "critical",
+    "status": "in_progress"
+  },
+  {
+    "incident_id": "INC-2026-A12CD64",
+    "title": "Malware Infection",
+    "type": "malware",
+    "severity": "low",
+    "status": "in_progress"
+  },
+   {
+    "incident_id": "INC-2026-A12CD604",
+    "title": "Malware Infection",
+    "type": "malware",
+    "severity": "low",
     "status": "in_progress"
   }
 ]

@@ -2,17 +2,34 @@
   {
     "source": "suricata",
     "source_ip": "192.168.1.105",
-    "dest_ip": "10.0.0.1",
+    "dest_ip": "10.0.0.15",
     "rule_name": "ET SCAN Nmap",
     "severity": "medium",
     "timestamp": "2026-06-07T08:30:00Z"
   },
   {
     "source": "zeek",
-    "source_ip": "192.168.1.110",
+    "source_ip": "192.168.1.10",
     "dest_ip": "10.0.0.5",
     "rule_name": "Suspicious DNS Activity",
     "severity": "critical",
     "timestamp": "2026-06-07T08:35:00Z"
+  },
+  {
+    "source": "zeek",
+    "source_ip": "192.168.10.110",
+    "dest_ip": "10.0.0.25",
+    "rule_name": "Suspicious DNS Activity",
+    "severity": "low",
+    "timestamp": "2026-06-07T08:35:00Z"
+  },
+  {
+    "source": "wazhu",
+    "source_ip": "192.167.10.110",
+    "dest_ip": "10.0.0.125",
+    "rule_name": "Suspicious DNS Activity",
+    "severity": "high",
+    "timestamp": "2026-06-07T08:35:00Z"
   }
+
 ]
