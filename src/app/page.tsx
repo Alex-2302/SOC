@@ -1,3 +1,4 @@
+
 import StatCard from "@/components/StatCard";
 import ThreatChart from "@/components/ThreatChart";
 import dashboardData from "@/data/dashboard.json";
@@ -6,7 +7,7 @@ import incidents from "@/data/incidents.json";
 import Link from "next/link";
 
 export default function Home() {
-
+  
   const totalAlerts = alerts.length;
 
   const criticalAlerts = alerts.filter(

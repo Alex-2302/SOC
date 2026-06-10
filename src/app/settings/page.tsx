@@ -1,3 +1,5 @@
+"use client";
+
 export default function SettingsPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white p-8">
@@ -6,6 +8,8 @@ export default function SettingsPage() {
       </h1>
 
       <div className="space-y-6 max-w-2xl">
+
+        {/* User Preferences */}
         <div className="bg-slate-800 rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-4">
             User Preferences
@@ -38,6 +42,7 @@ export default function SettingsPage() {
           </div>
         </div>
 
+        {/* Notifications */}
         <div className="bg-slate-800 rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-4">
             Notifications
@@ -61,9 +66,76 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        <button className="bg-blue-600 px-6 py-3 rounded-lg">
+        {/* Alert Preferences */}
+        <div className="bg-slate-800 rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-4">
+            Alert Preferences
+          </h2>
+
+          <div className="space-y-3">
+            <label className="flex gap-2">
+              <input type="checkbox" defaultChecked />
+              Critical Alerts
+            </label>
+
+            <label className="flex gap-2">
+              <input type="checkbox" defaultChecked />
+              High Alerts
+            </label>
+
+            <label className="flex gap-2">
+              <input type="checkbox" defaultChecked />
+              Medium Alerts
+            </label>
+
+            <label className="flex gap-2">
+              <input type="checkbox" defaultChecked />
+              Low Alerts
+            </label>
+          </div>
+        </div>
+
+        {/* Export Preferences */}
+        <div className="bg-slate-800 rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-4">
+            Export Preferences
+          </h2>
+
+          <label className="block">
+            <span className="text-slate-300">
+              Default Export Format
+            </span>
+
+            <select className="w-full mt-2 bg-slate-700 rounded px-3 py-2">
+              <option>PDF</option>
+              <option>DOCX</option>
+              <option>CSV</option>
+              <option>TXT</option>
+            </select>
+          </label>
+        </div>
+
+        {/* System Information */}
+        <div className="bg-slate-800 rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-4">
+            System Information
+          </h2>
+
+          <div className="space-y-2 text-slate-300">
+            <p>SOC Dashboard v1.0</p>
+            <p>Frontend: Next.js</p>
+            <p>Status: Online</p>
+          </div>
+        </div>
+
+        {/* Save Button */}
+        <button
+          onClick={() => alert("Settings Saved")}
+          className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700"
+        >
           Save Settings
         </button>
+
       </div>
     </main>
   );

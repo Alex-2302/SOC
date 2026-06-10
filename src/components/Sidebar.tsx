@@ -7,6 +7,9 @@ export default function Sidebar() {
   const pathname = usePathname();
   
   
+  if (pathname === "/login" || pathname === "/welcome") {
+    return null;
+  }
   return (
     <div className="w-64 min-h-screen bg-slate-900 p-4">
       <h1 className="text-white text-xl font-bold mb-8">
