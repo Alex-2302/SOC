@@ -32,7 +32,7 @@ export default function PlaybookCard({
   <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
     <div className="bg-slate-800 p-6 rounded-xl w-80">
       <h2 className="text-xl font-semibold mb-4">
-        Download Report
+        Download Report As
       </h2>
 
       <select
