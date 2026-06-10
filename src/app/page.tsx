@@ -52,11 +52,11 @@ export default function Home() {
     </h2>
 
     <div className="space-y-2">
-      {alerts.slice(0, 3).map((alert) => (
-        <p key={alert.rule_name}>
-          {alert.rule_name} | {alert.severity}
-        </p>
-      ))}
+      {alerts.slice(0, 3).map((alert, index) => (
+  <p key={`${alert.source_ip}-${index}`}>
+    {alert.rule_name} | {alert.severity}
+  </p>
+))}
     </div>
   </div>
 

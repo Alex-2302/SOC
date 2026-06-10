@@ -5,6 +5,8 @@ import alerts from "@/data/alerts.json";
 
 export default function AlertTable() {
 
+  const [showExport, setShowExport] = useState(false);
+  const [exportType, setExportType] = useState("csv");
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState("severity");
   const filteredAlerts = alerts
@@ -91,6 +93,46 @@ export default function AlertTable() {
       </select>
     </div>
 
+    {showExport && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+    <div className="bg-slate-800 p-6 rounded-xl w-80">
+      <h2 className="text-xl font-semibold mb-4">
+        Export Alerts
+      </h2>
+
+      <select
+        value={exportType}
+        onChange={(e) => setExportType(e.target.value)}
+        className="w-full bg-slate-700 p-2 rounded mb-4"
+      >
+        <option value="pdf">PDF</option>
+        <option value="csv">CSV</option>
+        <option value="txt">TXT</option>
+        <option value="docx">DOCX</option>
+      </select>
+
+      <div className="flex justify-end gap-2">
+        <button
+          onClick={() => setShowExport(false)}
+          className="bg-slate-600 px-4 py-2 rounded"
+        >
+          Cancel
+        </button>
+
+        <button
+          onClick={() => {
+            alert(`Exporting as ${exportType}`);
+            setShowExport(false);
+          }}
+          className="bg-green-600 px-4 py-2 rounded"
+        >
+          Download
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     <table className="w-full">
 
         <thead>
@@ -143,6 +185,14 @@ export default function AlertTable() {
           
         </tbody>
       </table>
+      <div className="flex justify-end mt-4">
+  <button
+    onClick={() => setShowExport(true)}
+    className="bg-green-600 px-4 py-2 rounded-lg"
+  >
+    Export
+  </button>
+</div>
     </div>
   );
 }

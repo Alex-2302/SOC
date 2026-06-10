@@ -6,7 +6,7 @@ import PlaybookCard from "@/components/PlaybookCard";
 
 export default function PlaybookList() {
   const [search, setSearch] = useState("");
-
+  const [sortBy, setSortBy] = useState("severity");
   const filteredPlaybooks = playbooks.filter((playbook) =>
     playbook.title.toLowerCase().includes(search.toLowerCase())
   );
