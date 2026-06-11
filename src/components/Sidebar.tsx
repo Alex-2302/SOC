@@ -22,7 +22,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Dashboard
@@ -33,7 +33,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/alerts"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Alerts
@@ -43,7 +43,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/incidents"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Incidents
@@ -54,7 +54,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/playbooks"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Playbooks
@@ -65,7 +65,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/reports"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Reports
@@ -76,7 +76,7 @@ export default function Sidebar() {
   className={`block p-3 rounded ${
     pathname === "/settings"
       ? "bg-blue-600 text-white"
-      : "hover:bg-slate-700"
+      : "text-white hover:bg-slate-700"
   }`}
 >
   Settings
